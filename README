@@ -4,3 +4,16 @@ This is a custom kernel for stock based roms for:
 - Xperia S - nozomi
 - Xperia SL - nozomi2
 - Xperia Acro S - hikari
+
+To compile mt kernel for one of these devices use the following commands:
+
+The defconfig's to use are:
+- ka_s_defconfig for Xperia S
+- ka_sl_defconfig for Xperia SL
+- ka_acros_defconfig for Xperia Acro S
+
+ARCH=arm CROSS_COMPILE:location/to/toolchain make name_of_defonfig
+
+ARCH=arm CROSS_COMPILE:location/to/toolchain make -j#
+
+Where # is the number of CPU threads of your PC or Laptop
