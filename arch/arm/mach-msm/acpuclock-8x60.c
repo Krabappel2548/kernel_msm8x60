@@ -43,8 +43,8 @@
  * The PLL hardware has a minimum frequency of 384MHz.
  * Calibration should respect this limit. */
 #define L_VAL_SCPLL_CAL_MIN	0x08 /* =  432 MHz with 27MHz source */
-#define L_VAL_SCPLL_CAL_MMX  0x26 	
-#define CPU_FREQ_TABLE_SIZE 38
+#define L_VAL_SCPLL_CAL_MAX  0x26 	
+#define CPU_FREQ_TABLE_SIZE 40
 
 #define MAX_VDD_SC		1350000 /* uV */
 #define MIN_VDD_SC		 800000 /* uV */
