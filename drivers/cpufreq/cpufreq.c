@@ -678,7 +678,7 @@ static struct attribute_group vddtbl_attr_group = {
 	.attrs = vddtbl_attrs,
 	.name = "vdd_table",
 };
-#endif  /* CONFIG_CPU_VOLTAGE_TABLE */
+#endif	/* CONFIG_CPU_VOLTAGE_TABLE */
 
 struct kobject *cpufreq_global_kobject;
 EXPORT_SYMBOL(cpufreq_global_kobject);
@@ -1984,7 +1984,7 @@ EXPORT_SYMBOL_GPL(cpufreq_unregister_driver);
 static int __init cpufreq_core_init(void)
 {
 	int cpu;
-	
+
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 	int rc;
 #endif  /* CONFIG_CPU_VOLTAGE_TABLE */
@@ -2002,7 +2002,7 @@ static int __init cpufreq_core_init(void)
 #ifdef CONFIG_CPU_VOLTAGE_TABLE
 	rc = sysfs_create_group(cpufreq_global_kobject, &vddtbl_attr_group);
 #endif  /* CONFIG_CPU_VOLTAGE_TABLE */
-	
+
 	return 0;
 }
 core_initcall(cpufreq_core_init);
