@@ -198,7 +198,7 @@ int vfs_fsync_range(struct file *file, loff_t start, loff_t end, int datasync)
 out:
 	return ret;
 #ifdef CONFIG_DYNAMIC_FSYNC
-}
+	}
 #endif
 }
 EXPORT_SYMBOL(vfs_fsync_range);
@@ -320,8 +320,9 @@ SYSCALL_DEFINE(sync_file_range)(int fd, loff_t offset, loff_t nbytes,
 #ifdef CONFIG_DYNAMIC_FSYNC
 	if (!early_suspend_active)
 		return 0;
-	else
+	else {
 #endif
+
 	int ret;
 	struct file *file;
 	struct address_space *mapping;
@@ -402,7 +403,7 @@ out_put:
 out:
 	return ret;
 #ifdef CONFIG_DYNAMIC_FSYNC
-}
+	}
 #endif
 }
 #ifdef CONFIG_HAVE_SYSCALL_WRAPPERS
@@ -436,3 +437,4 @@ asmlinkage long SyS_sync_file_range2(long fd, long flags,
 }
 SYSCALL_ALIAS(sys_sync_file_range2, SyS_sync_file_range2);
 #endif
+
