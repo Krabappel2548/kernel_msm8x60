@@ -1,12 +1,12 @@
 #ifndef _ASM_ARM_TOPOLOGY_H
 #define _ASM_ARM_TOPOLOGY_H
 
-
 #ifdef CONFIG_ARM_CPU_TOPOLOGY
 
 #include <linux/cpumask.h>
 
 struct cputopo_arm {
+	int id;
 	int thread_id;
 	int core_id;
 	int socket_id;
