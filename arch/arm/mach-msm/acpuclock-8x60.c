@@ -47,7 +47,7 @@
 #define CPU_FREQ_TABLE_SIZE 40
 
 #define MAX_VDD_SC		1450000 /* uV */
-#define MIN_VDD_SC     		700000 /* uV */
+#define MIN_VDD_SC     		 750000 /* uV */
 #define MAX_VDD_MEM		1450000 /* uV */
 #define MAX_VDD_DIG		1300000 /* uV */
 #define MAX_AXI			 310500 /* KHz */
@@ -197,7 +197,6 @@ static struct clkctl_l2_speed l2_freq_tbl_v2[] = {
         [21] = {1458000,  1, 0x1B, 1212500, 1275000, 4},
         [22] = {1512000,  1, 0x1C, 1225000, 1275000, 4},
         [23] = {1566000,  1, 0x1D, 1225000, 1275000, 4},
-        [24] = {1612000,  1, 0x1E, 1250000, 1300000, 4},
 };
 
 #define L2(x) (&l2_freq_tbl_v2[(x)])
@@ -237,7 +236,7 @@ static struct clkctl_acpu_speed acpu_freq_tbl_oc[] = {
   { {1, 1}, 1728000,  ACPU_SCPLL, 0, 0, 1, 0x20, L2(21), 1275000, 0x03006000}, 
   { {1, 1}, 1782000,  ACPU_SCPLL, 0, 0, 1, 0x21, L2(22), 1300000, 0x03006000},
   { {1, 1}, 1836000,  ACPU_SCPLL, 0, 0, 1, 0x22, L2(23), 1325000, 0x03006000},
-  { {1, 1}, 1890000,  ACPU_SCPLL, 0, 0, 1, 0x23, L2(24), 1350000, 0x03006000},
+  { {1, 1}, 1890000,  ACPU_SCPLL, 0, 0, 1, 0x23, L2(23), 1350000, 0x03006000},
   { {0, 0}, 0 },
 };
 
