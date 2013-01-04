@@ -109,6 +109,11 @@ truncate_complete_page(struct address_space *mapping, struct page *page)
 
 	clear_page_mlock(page);
 	ClearPageMappedToDisk(page);
+	/* this must be after the remove_from_page_cache which
+	 * calls cleancache_put_page (and note page->mapping is now NULL)  
+	 */  
+	cleancache_flush_page(mapping, page );  
+
 	delete_from_page_cache(page);
 	return 0;
 }
