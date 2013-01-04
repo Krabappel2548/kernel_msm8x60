@@ -1403,6 +1403,10 @@ config GPU_OVERCLOCK
 	bool "Enable GPU Overclocking option"
 	default n
 
+config MSM8660_OC
+	int "OC"
+	default 1512000
+
 config CPU_VOLTAGE_TABLE
 	bool "Enable CPU Voltage Table via sysfs for adjustements"
 	default n
