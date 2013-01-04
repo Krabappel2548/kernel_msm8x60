@@ -1196,7 +1196,7 @@ cancel_work_sync(&dbs_info->up_work);
 cancel_work_sync(&dbs_info->down_work);
 }
 
-/*
+/* Unused methods
 static int pm_notifier_call(struct notifier_block *this,
 unsigned long event, void *ptr)
 {
@@ -1222,8 +1222,7 @@ return NOTIFY_DONE;
 
 static struct notifier_block pm_notifier = {
 .notifier_call = pm_notifier_call,
-};
-*/
+};*/
 
 static int reboot_notifier_call(struct notifier_block *this,
 unsigned long code, void *_cmd)
@@ -1436,3 +1435,4 @@ fs_initcall(cpufreq_gov_dbs_init);
 module_init(cpufreq_gov_dbs_init);
 #endif
 module_exit(cpufreq_gov_dbs_exit);
+
